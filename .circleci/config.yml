@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: cimg/base:2022.11
-    parallelism: 4
+    parallelism: 50
     steps:
       - run:
           name: download sdk
