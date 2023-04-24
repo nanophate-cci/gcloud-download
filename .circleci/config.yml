@@ -11,4 +11,3 @@ jobs:
           command: |
             curl --location --silent --fail --retry 3 --output "google-cloud-sdk.tar.gz" "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-427.0.0-linux-x86_64.tar.gz"
             tar -xzf google-cloud-sdk.tar.gz
-      - run:
