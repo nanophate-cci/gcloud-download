@@ -1,0 +1,14 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      image: cimg/base:stable
+    paralleism: 50
+    steps:
+      - checkout
+      - run:
+          name: download sdk
+          command: |
+            curl --location --silent --fail --retry 3 --output "google-cloud-sdk.tar.gz" "https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-427.0.0-linux-x86_64.tar.gz"
+            tar -xzf google-cloud-sdk.tar.gz
+      - run:
