@@ -1,11 +1,10 @@
 version: 2.1
 jobs:
-  build:
+  test:
     docker:
-      - image: cimg/base:stable
-    paralleism: 50
+      - image: cimg/base:2022.11
+    parallelism: 4
     steps:
-      - checkout
       - run:
           name: download sdk
           command: |
