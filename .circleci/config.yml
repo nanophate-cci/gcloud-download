@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: cimg/openjdk:11.0
-    parallelism: 50
+    parallelism: 100
     steps:
       - run:
           name: download sdk
